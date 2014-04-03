@@ -99,7 +99,7 @@
             this.tabMain.Location = new System.Drawing.Point(12, 27);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
-            this.tabMain.Size = new System.Drawing.Size(760, 522);
+            this.tabMain.Size = new System.Drawing.Size(667, 522);
             this.tabMain.TabIndex = 0;
             // 
             // tabReg
@@ -112,7 +112,7 @@
             this.tabReg.Location = new System.Drawing.Point(4, 22);
             this.tabReg.Name = "tabReg";
             this.tabReg.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReg.Size = new System.Drawing.Size(752, 496);
+            this.tabReg.Size = new System.Drawing.Size(659, 496);
             this.tabReg.TabIndex = 0;
             this.tabReg.Text = "Registrering";
             this.tabReg.UseVisualStyleBackColor = true;
@@ -398,7 +398,7 @@
             // 
             this.menuStrip1.Location = new System.Drawing.Point(3, 3);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(746, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(653, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -410,7 +410,7 @@
             this.tabSok.Location = new System.Drawing.Point(4, 22);
             this.tabSok.Name = "tabSok";
             this.tabSok.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSok.Size = new System.Drawing.Size(752, 496);
+            this.tabSok.Size = new System.Drawing.Size(659, 496);
             this.tabSok.TabIndex = 1;
             this.tabSok.Text = "Søk";
             this.tabSok.UseVisualStyleBackColor = true;
@@ -422,7 +422,7 @@
             this.viewToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(784, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(691, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -493,14 +493,14 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(465, 9);
+            this.txtSearch.Location = new System.Drawing.Point(6, 8);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(200, 20);
             this.txtSearch.TabIndex = 0;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(671, 6);
+            this.btnSearch.Location = new System.Drawing.Point(212, 6);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 1;
@@ -520,7 +520,7 @@
             this.parent2Tlf});
             this.dataSearch.Location = new System.Drawing.Point(6, 35);
             this.dataSearch.Name = "dataSearch";
-            this.dataSearch.Size = new System.Drawing.Size(740, 455);
+            this.dataSearch.Size = new System.Drawing.Size(647, 455);
             this.dataSearch.TabIndex = 2;
             // 
             // childName
@@ -557,10 +557,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(691, 562);
             this.Controls.Add(this.tabMain);
             this.Controls.Add(this.menuStrip2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(700, 600);
             this.Name = "mainFrame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medlemsregistrering Barnekirka";
