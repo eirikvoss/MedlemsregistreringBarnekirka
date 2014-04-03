@@ -28,28 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainFrame));
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabReg = new System.Windows.Forms.TabPage();
-            this.tabSok = new System.Windows.Forms.TabPage();
-            this.groupChild = new System.Windows.Forms.GroupBox();
-            this.labChildName = new System.Windows.Forms.Label();
-            this.txtChildName = new System.Windows.Forms.TextBox();
-            this.txtChildDate = new System.Windows.Forms.TextBox();
-            this.txtChildAllergy = new System.Windows.Forms.TextBox();
-            this.labChildDate = new System.Windows.Forms.Label();
-            this.labAllergy = new System.Windows.Forms.Label();
-            this.groupParent1 = new System.Windows.Forms.GroupBox();
-            this.labParent1Name = new System.Windows.Forms.Label();
-            this.txtParent1Name = new System.Windows.Forms.TextBox();
-            this.txtParent1Address = new System.Windows.Forms.TextBox();
-            this.txtParent1Zip = new System.Windows.Forms.TextBox();
-            this.txtParent1Tlf = new System.Windows.Forms.TextBox();
-            this.txtParent1Mail = new System.Windows.Forms.TextBox();
-            this.txtParent1City = new System.Windows.Forms.TextBox();
-            this.labParent1Address = new System.Windows.Forms.Label();
-            this.labParent1Zip = new System.Windows.Forms.Label();
-            this.labParent1Tlf = new System.Windows.Forms.Label();
-            this.labParent1Mail = new System.Windows.Forms.Label();
             this.groupParent2 = new System.Windows.Forms.GroupBox();
             this.labParent2Mail = new System.Windows.Forms.Label();
             this.labParent2Tlf = new System.Windows.Forms.Label();
@@ -62,16 +43,53 @@
             this.txtParent2Address = new System.Windows.Forms.TextBox();
             this.txtParent2Name = new System.Windows.Forms.TextBox();
             this.labParent2Name = new System.Windows.Forms.Label();
+            this.groupParent1 = new System.Windows.Forms.GroupBox();
+            this.labParent1Mail = new System.Windows.Forms.Label();
+            this.labParent1Tlf = new System.Windows.Forms.Label();
+            this.labParent1Zip = new System.Windows.Forms.Label();
+            this.labParent1Address = new System.Windows.Forms.Label();
+            this.txtParent1City = new System.Windows.Forms.TextBox();
+            this.txtParent1Mail = new System.Windows.Forms.TextBox();
+            this.txtParent1Tlf = new System.Windows.Forms.TextBox();
+            this.txtParent1Zip = new System.Windows.Forms.TextBox();
+            this.txtParent1Address = new System.Windows.Forms.TextBox();
+            this.txtParent1Name = new System.Windows.Forms.TextBox();
+            this.labParent1Name = new System.Windows.Forms.Label();
+            this.groupChild = new System.Windows.Forms.GroupBox();
+            this.labAllergy = new System.Windows.Forms.Label();
+            this.labChildDate = new System.Windows.Forms.Label();
+            this.txtChildAllergy = new System.Windows.Forms.TextBox();
+            this.txtChildDate = new System.Windows.Forms.TextBox();
+            this.txtChildName = new System.Windows.Forms.TextBox();
+            this.labChildName = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tabSok = new System.Windows.Forms.TabPage();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.filToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupRegistrer = new System.Windows.Forms.GroupBox();
+            this.chckAlreadyMember = new System.Windows.Forms.CheckBox();
+            this.chckWantMember = new System.Windows.Forms.CheckBox();
+            this.chckPrint = new System.Windows.Forms.CheckBox();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.dataSearch = new System.Windows.Forms.DataGridView();
+            this.childName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.childDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parent1Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parent1Tlf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parent2Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parent2Tlf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabMain.SuspendLayout();
             this.tabReg.SuspendLayout();
-            this.groupChild.SuspendLayout();
-            this.groupParent1.SuspendLayout();
             this.groupParent2.SuspendLayout();
+            this.groupParent1.SuspendLayout();
+            this.groupChild.SuspendLayout();
+            this.tabSok.SuspendLayout();
             this.menuStrip2.SuspendLayout();
+            this.groupRegistrer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // tabMain
@@ -86,6 +104,7 @@
             // 
             // tabReg
             // 
+            this.tabReg.Controls.Add(this.groupRegistrer);
             this.tabReg.Controls.Add(this.groupParent2);
             this.tabReg.Controls.Add(this.groupParent1);
             this.tabReg.Controls.Add(this.groupChild);
@@ -97,186 +116,6 @@
             this.tabReg.TabIndex = 0;
             this.tabReg.Text = "Registrering";
             this.tabReg.UseVisualStyleBackColor = true;
-            // 
-            // tabSok
-            // 
-            this.tabSok.Location = new System.Drawing.Point(4, 22);
-            this.tabSok.Name = "tabSok";
-            this.tabSok.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSok.Size = new System.Drawing.Size(752, 511);
-            this.tabSok.TabIndex = 1;
-            this.tabSok.Text = "Søk";
-            this.tabSok.UseVisualStyleBackColor = true;
-            // 
-            // groupChild
-            // 
-            this.groupChild.Controls.Add(this.labAllergy);
-            this.groupChild.Controls.Add(this.labChildDate);
-            this.groupChild.Controls.Add(this.txtChildAllergy);
-            this.groupChild.Controls.Add(this.txtChildDate);
-            this.groupChild.Controls.Add(this.txtChildName);
-            this.groupChild.Controls.Add(this.labChildName);
-            this.groupChild.Location = new System.Drawing.Point(7, 7);
-            this.groupChild.Name = "groupChild";
-            this.groupChild.Size = new System.Drawing.Size(330, 111);
-            this.groupChild.TabIndex = 0;
-            this.groupChild.TabStop = false;
-            this.groupChild.Text = "Barn";
-            // 
-            // labChildName
-            // 
-            this.labChildName.AutoSize = true;
-            this.labChildName.Location = new System.Drawing.Point(6, 21);
-            this.labChildName.Name = "labChildName";
-            this.labChildName.Size = new System.Drawing.Size(56, 13);
-            this.labChildName.TabIndex = 0;
-            this.labChildName.Text = "Fullt navn:";
-            // 
-            // txtChildName
-            // 
-            this.txtChildName.Location = new System.Drawing.Point(134, 21);
-            this.txtChildName.Name = "txtChildName";
-            this.txtChildName.Size = new System.Drawing.Size(150, 20);
-            this.txtChildName.TabIndex = 1;
-            // 
-            // txtChildDate
-            // 
-            this.txtChildDate.Location = new System.Drawing.Point(134, 48);
-            this.txtChildDate.Name = "txtChildDate";
-            this.txtChildDate.Size = new System.Drawing.Size(150, 20);
-            this.txtChildDate.TabIndex = 2;
-            // 
-            // txtChildAllergy
-            // 
-            this.txtChildAllergy.Location = new System.Drawing.Point(134, 74);
-            this.txtChildAllergy.Name = "txtChildAllergy";
-            this.txtChildAllergy.Size = new System.Drawing.Size(150, 20);
-            this.txtChildAllergy.TabIndex = 3;
-            // 
-            // labChildDate
-            // 
-            this.labChildDate.AutoSize = true;
-            this.labChildDate.Location = new System.Drawing.Point(7, 47);
-            this.labChildDate.Name = "labChildDate";
-            this.labChildDate.Size = new System.Drawing.Size(121, 13);
-            this.labChildDate.TabIndex = 4;
-            this.labChildDate.Text = "Fødselsdato(ddmmyyyy):";
-            // 
-            // labAllergy
-            // 
-            this.labAllergy.AutoSize = true;
-            this.labAllergy.Location = new System.Drawing.Point(7, 74);
-            this.labAllergy.Name = "labAllergy";
-            this.labAllergy.Size = new System.Drawing.Size(38, 13);
-            this.labAllergy.TabIndex = 5;
-            this.labAllergy.Text = "Allergi:";
-            // 
-            // groupParent1
-            // 
-            this.groupParent1.Controls.Add(this.labParent1Mail);
-            this.groupParent1.Controls.Add(this.labParent1Tlf);
-            this.groupParent1.Controls.Add(this.labParent1Zip);
-            this.groupParent1.Controls.Add(this.labParent1Address);
-            this.groupParent1.Controls.Add(this.txtParent1City);
-            this.groupParent1.Controls.Add(this.txtParent1Mail);
-            this.groupParent1.Controls.Add(this.txtParent1Tlf);
-            this.groupParent1.Controls.Add(this.txtParent1Zip);
-            this.groupParent1.Controls.Add(this.txtParent1Address);
-            this.groupParent1.Controls.Add(this.txtParent1Name);
-            this.groupParent1.Controls.Add(this.labParent1Name);
-            this.groupParent1.Location = new System.Drawing.Point(7, 125);
-            this.groupParent1.Name = "groupParent1";
-            this.groupParent1.Size = new System.Drawing.Size(330, 166);
-            this.groupParent1.TabIndex = 1;
-            this.groupParent1.TabStop = false;
-            this.groupParent1.Text = "1. foresatt";
-            // 
-            // labParent1Name
-            // 
-            this.labParent1Name.AutoSize = true;
-            this.labParent1Name.Location = new System.Drawing.Point(7, 20);
-            this.labParent1Name.Name = "labParent1Name";
-            this.labParent1Name.Size = new System.Drawing.Size(56, 13);
-            this.labParent1Name.TabIndex = 0;
-            this.labParent1Name.Text = "Fullt navn:";
-            // 
-            // txtParent1Name
-            // 
-            this.txtParent1Name.Location = new System.Drawing.Point(134, 20);
-            this.txtParent1Name.Name = "txtParent1Name";
-            this.txtParent1Name.Size = new System.Drawing.Size(150, 20);
-            this.txtParent1Name.TabIndex = 1;
-            // 
-            // txtParent1Address
-            // 
-            this.txtParent1Address.Location = new System.Drawing.Point(134, 47);
-            this.txtParent1Address.Name = "txtParent1Address";
-            this.txtParent1Address.Size = new System.Drawing.Size(150, 20);
-            this.txtParent1Address.TabIndex = 2;
-            // 
-            // txtParent1Zip
-            // 
-            this.txtParent1Zip.Location = new System.Drawing.Point(134, 74);
-            this.txtParent1Zip.Name = "txtParent1Zip";
-            this.txtParent1Zip.Size = new System.Drawing.Size(40, 20);
-            this.txtParent1Zip.TabIndex = 3;
-            // 
-            // txtParent1Tlf
-            // 
-            this.txtParent1Tlf.Location = new System.Drawing.Point(134, 101);
-            this.txtParent1Tlf.Name = "txtParent1Tlf";
-            this.txtParent1Tlf.Size = new System.Drawing.Size(150, 20);
-            this.txtParent1Tlf.TabIndex = 4;
-            // 
-            // txtParent1Mail
-            // 
-            this.txtParent1Mail.Location = new System.Drawing.Point(134, 128);
-            this.txtParent1Mail.Name = "txtParent1Mail";
-            this.txtParent1Mail.Size = new System.Drawing.Size(150, 20);
-            this.txtParent1Mail.TabIndex = 5;
-            // 
-            // txtParent1City
-            // 
-            this.txtParent1City.Location = new System.Drawing.Point(181, 74);
-            this.txtParent1City.Name = "txtParent1City";
-            this.txtParent1City.Size = new System.Drawing.Size(103, 20);
-            this.txtParent1City.TabIndex = 6;
-            // 
-            // labParent1Address
-            // 
-            this.labParent1Address.AutoSize = true;
-            this.labParent1Address.Location = new System.Drawing.Point(7, 47);
-            this.labParent1Address.Name = "labParent1Address";
-            this.labParent1Address.Size = new System.Drawing.Size(48, 13);
-            this.labParent1Address.TabIndex = 7;
-            this.labParent1Address.Text = "Adresse:";
-            // 
-            // labParent1Zip
-            // 
-            this.labParent1Zip.AutoSize = true;
-            this.labParent1Zip.Location = new System.Drawing.Point(7, 74);
-            this.labParent1Zip.Name = "labParent1Zip";
-            this.labParent1Zip.Size = new System.Drawing.Size(67, 13);
-            this.labParent1Zip.TabIndex = 8;
-            this.labParent1Zip.Text = "Postnr/Sted:";
-            // 
-            // labParent1Tlf
-            // 
-            this.labParent1Tlf.AutoSize = true;
-            this.labParent1Tlf.Location = new System.Drawing.Point(7, 101);
-            this.labParent1Tlf.Name = "labParent1Tlf";
-            this.labParent1Tlf.Size = new System.Drawing.Size(46, 13);
-            this.labParent1Tlf.TabIndex = 9;
-            this.labParent1Tlf.Text = "Telefon:";
-            // 
-            // labParent1Mail
-            // 
-            this.labParent1Mail.AutoSize = true;
-            this.labParent1Mail.Location = new System.Drawing.Point(7, 128);
-            this.labParent1Mail.Name = "labParent1Mail";
-            this.labParent1Mail.Size = new System.Drawing.Size(40, 13);
-            this.labParent1Mail.TabIndex = 10;
-            this.labParent1Mail.Text = "E-post:";
             // 
             // groupParent2
             // 
@@ -385,6 +224,176 @@
             this.labParent2Name.TabIndex = 0;
             this.labParent2Name.Text = "Fullt navn:";
             // 
+            // groupParent1
+            // 
+            this.groupParent1.Controls.Add(this.labParent1Mail);
+            this.groupParent1.Controls.Add(this.labParent1Tlf);
+            this.groupParent1.Controls.Add(this.labParent1Zip);
+            this.groupParent1.Controls.Add(this.labParent1Address);
+            this.groupParent1.Controls.Add(this.txtParent1City);
+            this.groupParent1.Controls.Add(this.txtParent1Mail);
+            this.groupParent1.Controls.Add(this.txtParent1Tlf);
+            this.groupParent1.Controls.Add(this.txtParent1Zip);
+            this.groupParent1.Controls.Add(this.txtParent1Address);
+            this.groupParent1.Controls.Add(this.txtParent1Name);
+            this.groupParent1.Controls.Add(this.labParent1Name);
+            this.groupParent1.Location = new System.Drawing.Point(7, 125);
+            this.groupParent1.Name = "groupParent1";
+            this.groupParent1.Size = new System.Drawing.Size(330, 166);
+            this.groupParent1.TabIndex = 1;
+            this.groupParent1.TabStop = false;
+            this.groupParent1.Text = "1. foresatt";
+            // 
+            // labParent1Mail
+            // 
+            this.labParent1Mail.AutoSize = true;
+            this.labParent1Mail.Location = new System.Drawing.Point(7, 128);
+            this.labParent1Mail.Name = "labParent1Mail";
+            this.labParent1Mail.Size = new System.Drawing.Size(40, 13);
+            this.labParent1Mail.TabIndex = 10;
+            this.labParent1Mail.Text = "E-post:";
+            // 
+            // labParent1Tlf
+            // 
+            this.labParent1Tlf.AutoSize = true;
+            this.labParent1Tlf.Location = new System.Drawing.Point(7, 101);
+            this.labParent1Tlf.Name = "labParent1Tlf";
+            this.labParent1Tlf.Size = new System.Drawing.Size(46, 13);
+            this.labParent1Tlf.TabIndex = 9;
+            this.labParent1Tlf.Text = "Telefon:";
+            // 
+            // labParent1Zip
+            // 
+            this.labParent1Zip.AutoSize = true;
+            this.labParent1Zip.Location = new System.Drawing.Point(7, 74);
+            this.labParent1Zip.Name = "labParent1Zip";
+            this.labParent1Zip.Size = new System.Drawing.Size(67, 13);
+            this.labParent1Zip.TabIndex = 8;
+            this.labParent1Zip.Text = "Postnr/Sted:";
+            // 
+            // labParent1Address
+            // 
+            this.labParent1Address.AutoSize = true;
+            this.labParent1Address.Location = new System.Drawing.Point(7, 47);
+            this.labParent1Address.Name = "labParent1Address";
+            this.labParent1Address.Size = new System.Drawing.Size(48, 13);
+            this.labParent1Address.TabIndex = 7;
+            this.labParent1Address.Text = "Adresse:";
+            // 
+            // txtParent1City
+            // 
+            this.txtParent1City.Location = new System.Drawing.Point(181, 74);
+            this.txtParent1City.Name = "txtParent1City";
+            this.txtParent1City.Size = new System.Drawing.Size(103, 20);
+            this.txtParent1City.TabIndex = 6;
+            // 
+            // txtParent1Mail
+            // 
+            this.txtParent1Mail.Location = new System.Drawing.Point(134, 128);
+            this.txtParent1Mail.Name = "txtParent1Mail";
+            this.txtParent1Mail.Size = new System.Drawing.Size(150, 20);
+            this.txtParent1Mail.TabIndex = 5;
+            // 
+            // txtParent1Tlf
+            // 
+            this.txtParent1Tlf.Location = new System.Drawing.Point(134, 101);
+            this.txtParent1Tlf.Name = "txtParent1Tlf";
+            this.txtParent1Tlf.Size = new System.Drawing.Size(150, 20);
+            this.txtParent1Tlf.TabIndex = 4;
+            // 
+            // txtParent1Zip
+            // 
+            this.txtParent1Zip.Location = new System.Drawing.Point(134, 74);
+            this.txtParent1Zip.Name = "txtParent1Zip";
+            this.txtParent1Zip.Size = new System.Drawing.Size(40, 20);
+            this.txtParent1Zip.TabIndex = 3;
+            // 
+            // txtParent1Address
+            // 
+            this.txtParent1Address.Location = new System.Drawing.Point(134, 47);
+            this.txtParent1Address.Name = "txtParent1Address";
+            this.txtParent1Address.Size = new System.Drawing.Size(150, 20);
+            this.txtParent1Address.TabIndex = 2;
+            // 
+            // txtParent1Name
+            // 
+            this.txtParent1Name.Location = new System.Drawing.Point(134, 20);
+            this.txtParent1Name.Name = "txtParent1Name";
+            this.txtParent1Name.Size = new System.Drawing.Size(150, 20);
+            this.txtParent1Name.TabIndex = 1;
+            // 
+            // labParent1Name
+            // 
+            this.labParent1Name.AutoSize = true;
+            this.labParent1Name.Location = new System.Drawing.Point(7, 20);
+            this.labParent1Name.Name = "labParent1Name";
+            this.labParent1Name.Size = new System.Drawing.Size(56, 13);
+            this.labParent1Name.TabIndex = 0;
+            this.labParent1Name.Text = "Fullt navn:";
+            // 
+            // groupChild
+            // 
+            this.groupChild.Controls.Add(this.labAllergy);
+            this.groupChild.Controls.Add(this.labChildDate);
+            this.groupChild.Controls.Add(this.txtChildAllergy);
+            this.groupChild.Controls.Add(this.txtChildDate);
+            this.groupChild.Controls.Add(this.txtChildName);
+            this.groupChild.Controls.Add(this.labChildName);
+            this.groupChild.Location = new System.Drawing.Point(7, 7);
+            this.groupChild.Name = "groupChild";
+            this.groupChild.Size = new System.Drawing.Size(330, 111);
+            this.groupChild.TabIndex = 0;
+            this.groupChild.TabStop = false;
+            this.groupChild.Text = "Barn";
+            // 
+            // labAllergy
+            // 
+            this.labAllergy.AutoSize = true;
+            this.labAllergy.Location = new System.Drawing.Point(7, 74);
+            this.labAllergy.Name = "labAllergy";
+            this.labAllergy.Size = new System.Drawing.Size(38, 13);
+            this.labAllergy.TabIndex = 5;
+            this.labAllergy.Text = "Allergi:";
+            // 
+            // labChildDate
+            // 
+            this.labChildDate.AutoSize = true;
+            this.labChildDate.Location = new System.Drawing.Point(7, 47);
+            this.labChildDate.Name = "labChildDate";
+            this.labChildDate.Size = new System.Drawing.Size(121, 13);
+            this.labChildDate.TabIndex = 4;
+            this.labChildDate.Text = "Fødselsdato(ddmmyyyy):";
+            // 
+            // txtChildAllergy
+            // 
+            this.txtChildAllergy.Location = new System.Drawing.Point(134, 74);
+            this.txtChildAllergy.Name = "txtChildAllergy";
+            this.txtChildAllergy.Size = new System.Drawing.Size(150, 20);
+            this.txtChildAllergy.TabIndex = 3;
+            // 
+            // txtChildDate
+            // 
+            this.txtChildDate.Location = new System.Drawing.Point(134, 48);
+            this.txtChildDate.Name = "txtChildDate";
+            this.txtChildDate.Size = new System.Drawing.Size(150, 20);
+            this.txtChildDate.TabIndex = 2;
+            // 
+            // txtChildName
+            // 
+            this.txtChildName.Location = new System.Drawing.Point(134, 21);
+            this.txtChildName.Name = "txtChildName";
+            this.txtChildName.Size = new System.Drawing.Size(150, 20);
+            this.txtChildName.TabIndex = 1;
+            // 
+            // labChildName
+            // 
+            this.labChildName.AutoSize = true;
+            this.labChildName.Location = new System.Drawing.Point(6, 21);
+            this.labChildName.Name = "labChildName";
+            this.labChildName.Size = new System.Drawing.Size(56, 13);
+            this.labChildName.TabIndex = 0;
+            this.labChildName.Text = "Fullt navn:";
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Location = new System.Drawing.Point(3, 3);
@@ -392,6 +401,19 @@
             this.menuStrip1.Size = new System.Drawing.Size(746, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // tabSok
+            // 
+            this.tabSok.Controls.Add(this.dataSearch);
+            this.tabSok.Controls.Add(this.btnSearch);
+            this.tabSok.Controls.Add(this.txtSearch);
+            this.tabSok.Location = new System.Drawing.Point(4, 22);
+            this.tabSok.Name = "tabSok";
+            this.tabSok.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSok.Size = new System.Drawing.Size(752, 496);
+            this.tabSok.TabIndex = 1;
+            this.tabSok.Text = "Søk";
+            this.tabSok.UseVisualStyleBackColor = true;
             // 
             // menuStrip2
             // 
@@ -417,6 +439,120 @@
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
             // 
+            // groupRegistrer
+            // 
+            this.groupRegistrer.Controls.Add(this.btnRegister);
+            this.groupRegistrer.Controls.Add(this.chckPrint);
+            this.groupRegistrer.Controls.Add(this.chckWantMember);
+            this.groupRegistrer.Controls.Add(this.chckAlreadyMember);
+            this.groupRegistrer.Location = new System.Drawing.Point(352, 7);
+            this.groupRegistrer.Name = "groupRegistrer";
+            this.groupRegistrer.Size = new System.Drawing.Size(239, 178);
+            this.groupRegistrer.TabIndex = 4;
+            this.groupRegistrer.TabStop = false;
+            this.groupRegistrer.Text = "Registrer";
+            // 
+            // chckAlreadyMember
+            // 
+            this.chckAlreadyMember.AutoSize = true;
+            this.chckAlreadyMember.Location = new System.Drawing.Point(7, 24);
+            this.chckAlreadyMember.Name = "chckAlreadyMember";
+            this.chckAlreadyMember.Size = new System.Drawing.Size(165, 17);
+            this.chckAlreadyMember.TabIndex = 0;
+            this.chckAlreadyMember.Text = "Allerede medlem i Barnekirka.";
+            this.chckAlreadyMember.UseVisualStyleBackColor = true;
+            // 
+            // chckWantMember
+            // 
+            this.chckWantMember.AutoSize = true;
+            this.chckWantMember.Location = new System.Drawing.Point(7, 51);
+            this.chckWantMember.Name = "chckWantMember";
+            this.chckWantMember.Size = new System.Drawing.Size(183, 17);
+            this.chckWantMember.TabIndex = 1;
+            this.chckWantMember.Text = "Ønsker å bli medlem i Barnekirka.";
+            this.chckWantMember.UseVisualStyleBackColor = true;
+            // 
+            // chckPrint
+            // 
+            this.chckPrint.AutoSize = true;
+            this.chckPrint.Location = new System.Drawing.Point(7, 76);
+            this.chckPrint.Name = "chckPrint";
+            this.chckPrint.Size = new System.Drawing.Size(103, 17);
+            this.chckPrint.TabIndex = 2;
+            this.chckPrint.Text = "Print navnelapp.";
+            this.chckPrint.UseVisualStyleBackColor = true;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.Location = new System.Drawing.Point(32, 118);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(140, 40);
+            this.btnRegister.TabIndex = 3;
+            this.btnRegister.Text = "Registrer";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(465, 9);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(200, 20);
+            this.txtSearch.TabIndex = 0;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(671, 6);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "Søk";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // dataSearch
+            // 
+            this.dataSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.childName,
+            this.childDate,
+            this.parent1Name,
+            this.parent1Tlf,
+            this.parent2Name,
+            this.parent2Tlf});
+            this.dataSearch.Location = new System.Drawing.Point(6, 35);
+            this.dataSearch.Name = "dataSearch";
+            this.dataSearch.Size = new System.Drawing.Size(740, 455);
+            this.dataSearch.TabIndex = 2;
+            // 
+            // childName
+            // 
+            this.childName.HeaderText = "Barnets navn";
+            this.childName.Name = "childName";
+            // 
+            // childDate
+            // 
+            this.childDate.HeaderText = "Fødselsdato";
+            this.childDate.Name = "childDate";
+            // 
+            // parent1Name
+            // 
+            this.parent1Name.HeaderText = "Foresatt 1";
+            this.parent1Name.Name = "parent1Name";
+            // 
+            // parent1Tlf
+            // 
+            this.parent1Tlf.HeaderText = "Telefon 1";
+            this.parent1Tlf.Name = "parent1Tlf";
+            // 
+            // parent2Name
+            // 
+            this.parent2Name.HeaderText = "Foresatt 2";
+            this.parent2Name.Name = "parent2Name";
+            // 
+            // parent2Tlf
+            // 
+            this.parent2Tlf.HeaderText = "Telefon 2";
+            this.parent2Tlf.Name = "parent2Tlf";
+            // 
             // mainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,20 +560,26 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.tabMain);
             this.Controls.Add(this.menuStrip2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mainFrame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medlemsregistrering Barnekirka";
             this.tabMain.ResumeLayout(false);
             this.tabReg.ResumeLayout(false);
             this.tabReg.PerformLayout();
-            this.groupChild.ResumeLayout(false);
-            this.groupChild.PerformLayout();
-            this.groupParent1.ResumeLayout(false);
-            this.groupParent1.PerformLayout();
             this.groupParent2.ResumeLayout(false);
             this.groupParent2.PerformLayout();
+            this.groupParent1.ResumeLayout(false);
+            this.groupParent1.PerformLayout();
+            this.groupChild.ResumeLayout(false);
+            this.groupChild.PerformLayout();
+            this.tabSok.ResumeLayout(false);
+            this.tabSok.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            this.groupRegistrer.ResumeLayout(false);
+            this.groupRegistrer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,6 +625,20 @@
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem filToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupRegistrer;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.CheckBox chckPrint;
+        private System.Windows.Forms.CheckBox chckWantMember;
+        private System.Windows.Forms.CheckBox chckAlreadyMember;
+        private System.Windows.Forms.DataGridView dataSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn childName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn childDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parent1Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parent1Tlf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parent2Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parent2Tlf;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
 
