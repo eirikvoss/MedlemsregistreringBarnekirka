@@ -81,6 +81,11 @@
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.radioAlreadyMember = new System.Windows.Forms.RadioButton();
             this.radioWantMember = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabMain.SuspendLayout();
             this.tabReg.SuspendLayout();
             this.groupRegistrer.SuspendLayout();
@@ -90,6 +95,7 @@
             this.tabSok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSearch)).BeginInit();
             this.menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabMain
@@ -104,6 +110,7 @@
             // 
             // tabReg
             // 
+            this.tabReg.Controls.Add(this.pictureBox1);
             this.tabReg.Controls.Add(this.groupRegistrer);
             this.tabReg.Controls.Add(this.groupParent2);
             this.tabReg.Controls.Add(this.groupParent1);
@@ -208,42 +215,42 @@
             // 
             // txtParent2City
             // 
-            this.txtParent2City.Location = new System.Drawing.Point(181, 74);
+            this.txtParent2City.Location = new System.Drawing.Point(221, 73);
             this.txtParent2City.Name = "txtParent2City";
             this.txtParent2City.Size = new System.Drawing.Size(103, 20);
             this.txtParent2City.TabIndex = 6;
             // 
             // txtParent2Mail
             // 
-            this.txtParent2Mail.Location = new System.Drawing.Point(134, 128);
+            this.txtParent2Mail.Location = new System.Drawing.Point(174, 125);
             this.txtParent2Mail.Name = "txtParent2Mail";
             this.txtParent2Mail.Size = new System.Drawing.Size(150, 20);
             this.txtParent2Mail.TabIndex = 5;
             // 
             // txtParent2Tlf
             // 
-            this.txtParent2Tlf.Location = new System.Drawing.Point(134, 101);
+            this.txtParent2Tlf.Location = new System.Drawing.Point(174, 99);
             this.txtParent2Tlf.Name = "txtParent2Tlf";
             this.txtParent2Tlf.Size = new System.Drawing.Size(150, 20);
             this.txtParent2Tlf.TabIndex = 4;
             // 
             // txtParent2Zip
             // 
-            this.txtParent2Zip.Location = new System.Drawing.Point(134, 74);
+            this.txtParent2Zip.Location = new System.Drawing.Point(175, 73);
             this.txtParent2Zip.Name = "txtParent2Zip";
             this.txtParent2Zip.Size = new System.Drawing.Size(40, 20);
             this.txtParent2Zip.TabIndex = 3;
             // 
             // txtParent2Address
             // 
-            this.txtParent2Address.Location = new System.Drawing.Point(134, 47);
+            this.txtParent2Address.Location = new System.Drawing.Point(174, 47);
             this.txtParent2Address.Name = "txtParent2Address";
             this.txtParent2Address.Size = new System.Drawing.Size(150, 20);
             this.txtParent2Address.TabIndex = 2;
             // 
             // txtParent2Name
             // 
-            this.txtParent2Name.Location = new System.Drawing.Point(134, 20);
+            this.txtParent2Name.Location = new System.Drawing.Point(174, 21);
             this.txtParent2Name.Name = "txtParent2Name";
             this.txtParent2Name.Size = new System.Drawing.Size(150, 20);
             this.txtParent2Name.TabIndex = 1;
@@ -259,6 +266,8 @@
             // 
             // groupParent1
             // 
+            this.groupParent1.Controls.Add(this.label4);
+            this.groupParent1.Controls.Add(this.label3);
             this.groupParent1.Controls.Add(this.labParent1Mail);
             this.groupParent1.Controls.Add(this.labParent1Tlf);
             this.groupParent1.Controls.Add(this.labParent1Zip);
@@ -315,42 +324,42 @@
             // 
             // txtParent1City
             // 
-            this.txtParent1City.Location = new System.Drawing.Point(181, 74);
+            this.txtParent1City.Location = new System.Drawing.Point(221, 72);
             this.txtParent1City.Name = "txtParent1City";
             this.txtParent1City.Size = new System.Drawing.Size(103, 20);
             this.txtParent1City.TabIndex = 6;
             // 
             // txtParent1Mail
             // 
-            this.txtParent1Mail.Location = new System.Drawing.Point(134, 128);
+            this.txtParent1Mail.Location = new System.Drawing.Point(174, 124);
             this.txtParent1Mail.Name = "txtParent1Mail";
             this.txtParent1Mail.Size = new System.Drawing.Size(150, 20);
             this.txtParent1Mail.TabIndex = 5;
             // 
             // txtParent1Tlf
             // 
-            this.txtParent1Tlf.Location = new System.Drawing.Point(134, 101);
+            this.txtParent1Tlf.Location = new System.Drawing.Point(174, 98);
             this.txtParent1Tlf.Name = "txtParent1Tlf";
             this.txtParent1Tlf.Size = new System.Drawing.Size(150, 20);
             this.txtParent1Tlf.TabIndex = 4;
             // 
             // txtParent1Zip
             // 
-            this.txtParent1Zip.Location = new System.Drawing.Point(134, 74);
+            this.txtParent1Zip.Location = new System.Drawing.Point(175, 72);
             this.txtParent1Zip.Name = "txtParent1Zip";
             this.txtParent1Zip.Size = new System.Drawing.Size(40, 20);
             this.txtParent1Zip.TabIndex = 3;
             // 
             // txtParent1Address
             // 
-            this.txtParent1Address.Location = new System.Drawing.Point(134, 47);
+            this.txtParent1Address.Location = new System.Drawing.Point(174, 46);
             this.txtParent1Address.Name = "txtParent1Address";
             this.txtParent1Address.Size = new System.Drawing.Size(150, 20);
             this.txtParent1Address.TabIndex = 2;
             // 
             // txtParent1Name
             // 
-            this.txtParent1Name.Location = new System.Drawing.Point(134, 20);
+            this.txtParent1Name.Location = new System.Drawing.Point(174, 20);
             this.txtParent1Name.Name = "txtParent1Name";
             this.txtParent1Name.Size = new System.Drawing.Size(150, 20);
             this.txtParent1Name.TabIndex = 1;
@@ -366,6 +375,8 @@
             // 
             // groupChild
             // 
+            this.groupChild.Controls.Add(this.label2);
+            this.groupChild.Controls.Add(this.label1);
             this.groupChild.Controls.Add(this.labAllergy);
             this.groupChild.Controls.Add(this.labChildDate);
             this.groupChild.Controls.Add(this.txtChildAllergy);
@@ -399,21 +410,21 @@
             // 
             // txtChildAllergy
             // 
-            this.txtChildAllergy.Location = new System.Drawing.Point(134, 74);
+            this.txtChildAllergy.Location = new System.Drawing.Point(174, 73);
             this.txtChildAllergy.Name = "txtChildAllergy";
             this.txtChildAllergy.Size = new System.Drawing.Size(150, 20);
             this.txtChildAllergy.TabIndex = 3;
             // 
             // txtChildDate
             // 
-            this.txtChildDate.Location = new System.Drawing.Point(134, 48);
+            this.txtChildDate.Location = new System.Drawing.Point(174, 47);
             this.txtChildDate.Name = "txtChildDate";
             this.txtChildDate.Size = new System.Drawing.Size(150, 20);
             this.txtChildDate.TabIndex = 2;
             // 
             // txtChildName
             // 
-            this.txtChildName.Location = new System.Drawing.Point(134, 21);
+            this.txtChildName.Location = new System.Drawing.Point(174, 21);
             this.txtChildName.Name = "txtChildName";
             this.txtChildName.Size = new System.Drawing.Size(150, 20);
             this.txtChildName.TabIndex = 1;
@@ -556,6 +567,51 @@
             this.radioWantMember.Text = "Ønsker å bli medlem i Barnekirka";
             this.radioWantMember.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(163, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(11, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(163, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(11, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(163, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(11, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(163, 101);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(11, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "*";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(359, 203);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(232, 239);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -584,6 +640,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSearch)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -643,6 +700,11 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.RadioButton radioWantMember;
         private System.Windows.Forms.RadioButton radioAlreadyMember;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
