@@ -77,8 +77,8 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.filToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemView = new System.Windows.Forms.ToolStripMenuItem();
             this.radioAlreadyMember = new System.Windows.Forms.RadioButton();
             this.radioWantMember = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -86,6 +86,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuItemFileRegister = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemFileExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemViewRegister = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemViewSearch = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemHelpFaq = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.tabMain.SuspendLayout();
             this.tabReg.SuspendLayout();
             this.groupRegistrer.SuspendLayout();
@@ -524,26 +531,33 @@
             // menuStrip2
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filToolStripMenuItem,
-            this.viewToolStripMenuItem});
+            this.menuItemFile,
+            this.menuItemView,
+            this.menuItemHelp});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(691, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
-            // filToolStripMenuItem
+            // menuItemFile
             // 
-            this.filToolStripMenuItem.Name = "filToolStripMenuItem";
-            this.filToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.filToolStripMenuItem.Text = "File";
-            this.filToolStripMenuItem.Click += new System.EventHandler(this.filToolStripMenuItem_Click);
+            this.menuItemFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItemFileRegister,
+            this.menuItemFileExit});
+            this.menuItemFile.Name = "menuItemFile";
+            this.menuItemFile.Size = new System.Drawing.Size(31, 20);
+            this.menuItemFile.Text = "Fil";
+            this.menuItemFile.Click += new System.EventHandler(this.filToolStripMenuItem_Click);
             // 
-            // viewToolStripMenuItem
+            // menuItemView
             // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
+            this.menuItemView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItemViewRegister,
+            this.menuItemViewSearch});
+            this.menuItemView.Name = "menuItemView";
+            this.menuItemView.Size = new System.Drawing.Size(50, 20);
+            this.menuItemView.Text = "Vindu";
             // 
             // radioAlreadyMember
             // 
@@ -611,6 +625,51 @@
             this.pictureBox1.Size = new System.Drawing.Size(232, 239);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // menuItemFileRegister
+            // 
+            this.menuItemFileRegister.Name = "menuItemFileRegister";
+            this.menuItemFileRegister.Size = new System.Drawing.Size(159, 22);
+            this.menuItemFileRegister.Text = "Registrer person";
+            // 
+            // menuItemFileExit
+            // 
+            this.menuItemFileExit.Name = "menuItemFileExit";
+            this.menuItemFileExit.Size = new System.Drawing.Size(159, 22);
+            this.menuItemFileExit.Text = "Avslutt";
+            // 
+            // menuItemViewRegister
+            // 
+            this.menuItemViewRegister.Name = "menuItemViewRegister";
+            this.menuItemViewRegister.Size = new System.Drawing.Size(152, 22);
+            this.menuItemViewRegister.Text = "Registrering";
+            // 
+            // menuItemViewSearch
+            // 
+            this.menuItemViewSearch.Name = "menuItemViewSearch";
+            this.menuItemViewSearch.Size = new System.Drawing.Size(152, 22);
+            this.menuItemViewSearch.Text = "Søk";
+            // 
+            // menuItemHelp
+            // 
+            this.menuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItemHelpFaq,
+            this.menuItemHelpAbout});
+            this.menuItemHelp.Name = "menuItemHelp";
+            this.menuItemHelp.Size = new System.Drawing.Size(47, 20);
+            this.menuItemHelp.Text = "Hjelp";
+            // 
+            // menuItemHelpFaq
+            // 
+            this.menuItemHelpFaq.Name = "menuItemHelpFaq";
+            this.menuItemHelpFaq.Size = new System.Drawing.Size(164, 22);
+            this.menuItemHelpFaq.Text = "FAQ";
+            // 
+            // menuItemHelpAbout
+            // 
+            this.menuItemHelpAbout.Name = "menuItemHelpAbout";
+            this.menuItemHelpAbout.Size = new System.Drawing.Size(164, 22);
+            this.menuItemHelpAbout.Text = "Om programmet";
             // 
             // mainForm
             // 
@@ -684,8 +743,8 @@
         private System.Windows.Forms.Label labParent2Name;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem filToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuItemFile;
+        private System.Windows.Forms.ToolStripMenuItem menuItemView;
         private System.Windows.Forms.GroupBox groupRegistrer;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.CheckBox chckPrint;
@@ -705,6 +764,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem menuItemFileRegister;
+        private System.Windows.Forms.ToolStripMenuItem menuItemFileExit;
+        private System.Windows.Forms.ToolStripMenuItem menuItemViewRegister;
+        private System.Windows.Forms.ToolStripMenuItem menuItemViewSearch;
+        private System.Windows.Forms.ToolStripMenuItem menuItemHelp;
+        private System.Windows.Forms.ToolStripMenuItem menuItemHelpFaq;
+        private System.Windows.Forms.ToolStripMenuItem menuItemHelpAbout;
     }
 }
 
