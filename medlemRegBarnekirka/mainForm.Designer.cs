@@ -1,6 +1,6 @@
 ﻿namespace medlemRegBarnekirka
 {
-    partial class mainFrame
+    partial class mainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainFrame));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabReg = new System.Windows.Forms.TabPage();
+            this.groupRegistrer = new System.Windows.Forms.GroupBox();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.chckPrint = new System.Windows.Forms.CheckBox();
             this.groupParent2 = new System.Windows.Forms.GroupBox();
             this.labParent2Mail = new System.Windows.Forms.Label();
             this.labParent2Tlf = new System.Windows.Forms.Label();
@@ -64,16 +67,6 @@
             this.labChildName = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tabSok = new System.Windows.Forms.TabPage();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.filToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupRegistrer = new System.Windows.Forms.GroupBox();
-            this.chckAlreadyMember = new System.Windows.Forms.CheckBox();
-            this.chckWantMember = new System.Windows.Forms.CheckBox();
-            this.chckPrint = new System.Windows.Forms.CheckBox();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.dataSearch = new System.Windows.Forms.DataGridView();
             this.childName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.childDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,15 +74,22 @@
             this.parent1Tlf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parent2Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parent2Tlf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.filToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.radioAlreadyMember = new System.Windows.Forms.RadioButton();
+            this.radioWantMember = new System.Windows.Forms.RadioButton();
             this.tabMain.SuspendLayout();
             this.tabReg.SuspendLayout();
+            this.groupRegistrer.SuspendLayout();
             this.groupParent2.SuspendLayout();
             this.groupParent1.SuspendLayout();
             this.groupChild.SuspendLayout();
             this.tabSok.SuspendLayout();
-            this.menuStrip2.SuspendLayout();
-            this.groupRegistrer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSearch)).BeginInit();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabMain
@@ -116,6 +116,39 @@
             this.tabReg.TabIndex = 0;
             this.tabReg.Text = "Registrering";
             this.tabReg.UseVisualStyleBackColor = true;
+            // 
+            // groupRegistrer
+            // 
+            this.groupRegistrer.Controls.Add(this.radioWantMember);
+            this.groupRegistrer.Controls.Add(this.radioAlreadyMember);
+            this.groupRegistrer.Controls.Add(this.btnRegister);
+            this.groupRegistrer.Controls.Add(this.chckPrint);
+            this.groupRegistrer.Location = new System.Drawing.Point(352, 7);
+            this.groupRegistrer.Name = "groupRegistrer";
+            this.groupRegistrer.Size = new System.Drawing.Size(239, 178);
+            this.groupRegistrer.TabIndex = 4;
+            this.groupRegistrer.TabStop = false;
+            this.groupRegistrer.Text = "Registrer";
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.Location = new System.Drawing.Point(32, 118);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(140, 40);
+            this.btnRegister.TabIndex = 3;
+            this.btnRegister.Text = "Registrer";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.RegisterBtn_Click);
+            // 
+            // chckPrint
+            // 
+            this.chckPrint.AutoSize = true;
+            this.chckPrint.Location = new System.Drawing.Point(7, 76);
+            this.chckPrint.Name = "chckPrint";
+            this.chckPrint.Size = new System.Drawing.Size(103, 17);
+            this.chckPrint.TabIndex = 2;
+            this.chckPrint.Text = "Print navnelapp.";
+            this.chckPrint.UseVisualStyleBackColor = true;
             // 
             // groupParent2
             // 
@@ -360,9 +393,9 @@
             this.labChildDate.AutoSize = true;
             this.labChildDate.Location = new System.Drawing.Point(7, 47);
             this.labChildDate.Name = "labChildDate";
-            this.labChildDate.Size = new System.Drawing.Size(121, 13);
+            this.labChildDate.Size = new System.Drawing.Size(127, 13);
             this.labChildDate.TabIndex = 4;
-            this.labChildDate.Text = "Fødselsdato(ddmmyyyy):";
+            this.labChildDate.Text = "Fødselsdato(dd.mm.yyyy):";
             // 
             // txtChildAllergy
             // 
@@ -415,98 +448,6 @@
             this.tabSok.Text = "Søk";
             this.tabSok.UseVisualStyleBackColor = true;
             // 
-            // menuStrip2
-            // 
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filToolStripMenuItem,
-            this.viewToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(691, 24);
-            this.menuStrip2.TabIndex = 1;
-            this.menuStrip2.Text = "menuStrip2";
-            // 
-            // filToolStripMenuItem
-            // 
-            this.filToolStripMenuItem.Name = "filToolStripMenuItem";
-            this.filToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.filToolStripMenuItem.Text = "File";
-            this.filToolStripMenuItem.Click += new System.EventHandler(this.filToolStripMenuItem_Click);
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
-            // 
-            // groupRegistrer
-            // 
-            this.groupRegistrer.Controls.Add(this.btnRegister);
-            this.groupRegistrer.Controls.Add(this.chckPrint);
-            this.groupRegistrer.Controls.Add(this.chckWantMember);
-            this.groupRegistrer.Controls.Add(this.chckAlreadyMember);
-            this.groupRegistrer.Location = new System.Drawing.Point(352, 7);
-            this.groupRegistrer.Name = "groupRegistrer";
-            this.groupRegistrer.Size = new System.Drawing.Size(239, 178);
-            this.groupRegistrer.TabIndex = 4;
-            this.groupRegistrer.TabStop = false;
-            this.groupRegistrer.Text = "Registrer";
-            // 
-            // chckAlreadyMember
-            // 
-            this.chckAlreadyMember.AutoSize = true;
-            this.chckAlreadyMember.Location = new System.Drawing.Point(7, 24);
-            this.chckAlreadyMember.Name = "chckAlreadyMember";
-            this.chckAlreadyMember.Size = new System.Drawing.Size(165, 17);
-            this.chckAlreadyMember.TabIndex = 0;
-            this.chckAlreadyMember.Text = "Allerede medlem i Barnekirka.";
-            this.chckAlreadyMember.UseVisualStyleBackColor = true;
-            // 
-            // chckWantMember
-            // 
-            this.chckWantMember.AutoSize = true;
-            this.chckWantMember.Location = new System.Drawing.Point(7, 51);
-            this.chckWantMember.Name = "chckWantMember";
-            this.chckWantMember.Size = new System.Drawing.Size(183, 17);
-            this.chckWantMember.TabIndex = 1;
-            this.chckWantMember.Text = "Ønsker å bli medlem i Barnekirka.";
-            this.chckWantMember.UseVisualStyleBackColor = true;
-            // 
-            // chckPrint
-            // 
-            this.chckPrint.AutoSize = true;
-            this.chckPrint.Location = new System.Drawing.Point(7, 76);
-            this.chckPrint.Name = "chckPrint";
-            this.chckPrint.Size = new System.Drawing.Size(103, 17);
-            this.chckPrint.TabIndex = 2;
-            this.chckPrint.Text = "Print navnelapp.";
-            this.chckPrint.UseVisualStyleBackColor = true;
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.Location = new System.Drawing.Point(32, 118);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(140, 40);
-            this.btnRegister.TabIndex = 3;
-            this.btnRegister.Text = "Registrer";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(6, 8);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(200, 20);
-            this.txtSearch.TabIndex = 0;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(212, 6);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Søk";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
             // dataSearch
             // 
             this.dataSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -553,7 +494,69 @@
             this.parent2Tlf.HeaderText = "Telefon 2";
             this.parent2Tlf.Name = "parent2Tlf";
             // 
-            // mainFrame
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(212, 6);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "Søk";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(6, 8);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(200, 20);
+            this.txtSearch.TabIndex = 0;
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filToolStripMenuItem,
+            this.viewToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(691, 24);
+            this.menuStrip2.TabIndex = 1;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // filToolStripMenuItem
+            // 
+            this.filToolStripMenuItem.Name = "filToolStripMenuItem";
+            this.filToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.filToolStripMenuItem.Text = "File";
+            this.filToolStripMenuItem.Click += new System.EventHandler(this.filToolStripMenuItem_Click);
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // radioAlreadyMember
+            // 
+            this.radioAlreadyMember.AutoSize = true;
+            this.radioAlreadyMember.Location = new System.Drawing.Point(7, 28);
+            this.radioAlreadyMember.Name = "radioAlreadyMember";
+            this.radioAlreadyMember.Size = new System.Drawing.Size(161, 17);
+            this.radioAlreadyMember.TabIndex = 4;
+            this.radioAlreadyMember.Text = "Allerede medlem i Barnekirka";
+            this.radioAlreadyMember.UseVisualStyleBackColor = true;
+            // 
+            // radioWantMember
+            // 
+            this.radioWantMember.AutoSize = true;
+            this.radioWantMember.Checked = true;
+            this.radioWantMember.Location = new System.Drawing.Point(7, 52);
+            this.radioWantMember.Name = "radioWantMember";
+            this.radioWantMember.Size = new System.Drawing.Size(179, 17);
+            this.radioWantMember.TabIndex = 5;
+            this.radioWantMember.TabStop = true;
+            this.radioWantMember.Text = "Ønsker å bli medlem i Barnekirka";
+            this.radioWantMember.UseVisualStyleBackColor = true;
+            // 
+            // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -562,12 +565,14 @@
             this.Controls.Add(this.menuStrip2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(700, 600);
-            this.Name = "mainFrame";
+            this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medlemsregistrering Barnekirka";
             this.tabMain.ResumeLayout(false);
             this.tabReg.ResumeLayout(false);
             this.tabReg.PerformLayout();
+            this.groupRegistrer.ResumeLayout(false);
+            this.groupRegistrer.PerformLayout();
             this.groupParent2.ResumeLayout(false);
             this.groupParent2.PerformLayout();
             this.groupParent1.ResumeLayout(false);
@@ -576,11 +581,9 @@
             this.groupChild.PerformLayout();
             this.tabSok.ResumeLayout(false);
             this.tabSok.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSearch)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            this.groupRegistrer.ResumeLayout(false);
-            this.groupRegistrer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -615,9 +618,9 @@
         private System.Windows.Forms.Label labParent2Tlf;
         private System.Windows.Forms.Label labParent2Zip;
         private System.Windows.Forms.Label labParent2Address;
-        private System.Windows.Forms.TextBox txtParent2City;
         private System.Windows.Forms.TextBox txtParent2Mail;
         private System.Windows.Forms.TextBox txtParent2Tlf;
+        private System.Windows.Forms.TextBox txtParent2City;
         private System.Windows.Forms.TextBox txtParent2Zip;
         private System.Windows.Forms.TextBox txtParent2Address;
         private System.Windows.Forms.TextBox txtParent2Name;
@@ -629,8 +632,6 @@
         private System.Windows.Forms.GroupBox groupRegistrer;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.CheckBox chckPrint;
-        private System.Windows.Forms.CheckBox chckWantMember;
-        private System.Windows.Forms.CheckBox chckAlreadyMember;
         private System.Windows.Forms.DataGridView dataSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn childName;
         private System.Windows.Forms.DataGridViewTextBoxColumn childDate;
@@ -640,6 +641,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn parent2Tlf;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.RadioButton radioWantMember;
+        private System.Windows.Forms.RadioButton radioAlreadyMember;
     }
 }
 
